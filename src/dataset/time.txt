@@ -1,0 +1,168 @@
+after
+afternoon
+afterwards
+alarm clock
+AM
+analog clock
+annual
+ante meridian
+anytime
+B
+bedtime
+before
+before hand
+belated
+bell
+biennial
+bicentennial
+C
+calendar
+calendar year
+century
+chronological
+chronology
+chronometer
+clock
+clock face
+Coordinated Universal Time
+cuckoo clock
+D
+day
+daylight
+daylight savings time
+daytime
+days of the week
+decade
+decennium
+delay
+delayed
+dial
+digital clock
+DST
+E
+early
+eon
+epoch
+era
+evening
+everyday
+F
+face (of a clock)
+fiscal year
+fortnight
+future
+G
+galactic year
+geologic time
+gnomon
+grandfather clock
+Greenwich Mean Time
+H
+half-life
+hands
+high noon
+horology
+hour
+hourglass
+hour hand
+I
+IDL
+International Date Line
+J
+jiffy
+jubilee
+L
+late
+later
+leap second
+leap year
+lunar month
+M
+meridian
+microsecond
+midafternoon
+midnight
+midmorning
+millennium
+millisecond
+minute
+minute hand
+moment
+momentarily
+month
+morning
+N
+nanosecond
+night
+nighttime
+noon
+now
+O
+o'clock
+on time
+overtime
+P
+past
+pendulum clock
+per annum
+per diem
+period
+picosecond
+PM
+pocket watch
+post meridian
+premature
+present
+prime meridian
+punctual
+Q
+quarter hour
+quartz clock
+quaver
+S
+schedule
+season
+second
+second hand
+semester
+semiquaver
+shift
+sidereal time
+someday
+sometime
+soon
+stopwatch
+sundial
+sunrise
+sunset
+synchronized
+T
+tardy
+tempo
+then
+time
+timekeeper
+timepiece
+timer
+timetable
+time zone
+tonight
+today
+tomorrow
+triennium
+trimester
+twilight
+U
+UTC
+W
+watch
+water clock
+week
+wristwatch
+Y
+year
+yesterday
+yesteryear
+Z
+zone
+Zulu time

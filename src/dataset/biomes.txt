@@ -1,0 +1,126 @@
+A
+abyssal
+Alpine
+aquatic
+Arctic
+B
+bayou
+benthic zone
+biome
+bog
+boreal forest
+broadleaf forest
+C
+campo
+cave
+chaparral
+city
+coastal river
+cold seep
+coniferous forest
+coral reef
+D
+deciduous forest
+deep sea
+deep sea trench
+desert
+disphotic zone
+E
+ecoregion
+ecosystem
+ecozone
+euphotic zone
+F
+fen
+flooded grassland
+floodplain
+forest
+freshwater biomes
+freshwater marsh
+G
+glade
+grasslands
+H
+habitat
+hadal
+heath
+highland
+hydrothermal vent
+I
+intertidal zone
+J
+jungle
+K
+kelp forest
+L
+lacustrine
+land cave
+littoral zone
+M
+mangrove forest
+marine biomes
+marsh
+marshland
+meadow
+Mediterranean forest
+Mediterranean scrub
+Mediterranean woodland
+mire
+mixed forest
+montane grassland
+moor
+N
+neritic zone
+northern coniferous forest
+O
+ocean open sea
+P
+pack ice
+palustrine
+pampas
+peat bog
+peatland
+peat swamp
+pelagic zone
+playa
+polar
+polar desert
+pond
+prairie
+Q
+quagmire
+R
+rainforest
+riparian zone
+river delta
+S
+salt marsh
+savanna
+sclerophyll forest
+scrub
+sea cave
+sea trench
+shrubland
+slough
+steppe
+swamp
+T
+taiga
+temperate deciduous forest
+temperate rainforest
+terrestrial biomes
+terrestrial cave
+tide pools
+tropical rainforest
+tundra
+U
+upland river
+V
+veldt
+W
+wetland
+wet meadow
+woodland
+woods
+X
+xeric shrubland

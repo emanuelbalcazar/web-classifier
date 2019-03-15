@@ -1,10 +1,16 @@
 const fs = require('fs');
 
+/**
+ * @class FileParser
+ * @author Carlos Emanuel Balcazar
+ */
 class FileParser {
 
-    constructor() {
-
-    }
+    /**
+     * Creates an instance of FileParser.
+     * @memberof FileParser
+     */
+    constructor() { }
 
     /**
      * List files into folder
@@ -16,6 +22,10 @@ class FileParser {
         return files;
     }
 
+    /**
+     * Get data from file
+     * @param {String} filepath
+     */
     async getData(filepath) {
         return new Promise((resolve, reject) => {
             let data = fs.readFileSync(filepath).toString().split('\n');
@@ -25,6 +35,10 @@ class FileParser {
     }
 }
 
+/**
+ * Clean data
+ * @param {Array} records
+ */
 async function clean(records) {
     records = records.filter(elem => {
         return (elem.length > 1);

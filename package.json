@@ -1,16 +1,19 @@
 {
-  "name": "web-classifier",
-  "version": "1.0.0",
-  "description": "clasificador de paginas web",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Carlos Emanuel Balcazar",
-  "license": "ISC",
-  "dependencies": {
-    "async": "^2.6.2",
-    "natural": "^0.6.3",
-    "node-spider": "^1.4.1"
-  }
+    "name": "web-classifier",
+    "version": "1.0.0",
+    "description": "clasificador de paginas web",
+    "main": "index.js",
+    "scripts": {
+        "train": "node ./src/train.js",
+        "classify": "node ./src/classify.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Carlos Emanuel Balcazar",
+    "license": "ISC",
+    "dependencies": {
+        "async": "^2.6.2",
+        "natural": "^0.6.3",
+        "node-spider": "^1.4.1",
+        "require-all": "^3.0.0"
+    }
 }

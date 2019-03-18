@@ -3,6 +3,7 @@ const textract = require('textract');
 
 const bayesModel = require('./classifiers/NaiveBayes');
 const logisticModel = require('./classifiers/LogisticRegression');
+const config = require('./config/config');
 
 var Spider = require('node-spider');
 
@@ -70,5 +71,5 @@ var handleRequest = async function (doc) {
     });
 };
 
-// TODO parametrizar!
-spider.queue('https://en.wikipedia.org/wiki/Special:Random', handleRequest);
+// start the spider
+spider.queue(config.START_PAGE, handleRequest);

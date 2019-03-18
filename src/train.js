@@ -4,7 +4,6 @@ const parser = require('./parser/fileParser');
 const config = require('./config/config');
 const DATASET_FOLDER = __dirname + config.DATASET_FOLDER;
 
-// get all PUBLIC routes
 const classifiers = [];
 
 require('require-all')({
@@ -30,6 +29,7 @@ async function train() {
 
         classifiers.forEach(classifier => classifier.train());
         classifiers.forEach(async classifier => { await classifier.save() });
+
         console.log('[train] - Todos los clasificadores se entrenaron y guardaron correctamente.');
     });
 }

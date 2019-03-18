@@ -15,7 +15,7 @@ class LogisticRegression {
     }
 
     classify(text) {
-        return classifier.getClassifications(text);
+        return classifier.classify(text);
     }
 
     train() {

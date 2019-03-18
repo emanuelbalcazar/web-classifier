@@ -1,8 +1,8 @@
 const natural = require('natural');
-const config = require('./config/config');
-const text = require('./test/text');
+const textract = require('textract');
 
-const CLASSIFIER_FILE = __dirname + config.CLASSIFIER_FILE;
+const bayesModel = require('./classifiers/NaiveBayes');
+const logisticModel = require('./classifiers/LogisticRegression');
 
 var Spider = require('node-spider');
 
@@ -36,29 +36,37 @@ var spider = new Spider({
     encoding: 'utf8'
 });
 
-var handleRequest = function (doc) {
+var handleRequest = async function (doc) {
+
+    // atach natural methods
+    natural.LancasterStemmer.attach();
+
+    // load classifiers
+    var bayesClassifier = await bayesModel.load();
+    var logisticClassifier = await logisticModel.load();
+
     // new page crawled
-    //console.log(doc.res); // response object
-    console.log(doc.url); // page url
-    // uses cheerio, check its docs for more info
-    doc.$('a').each(function (i, elem) {
-        // do stuff with element
-        var href = doc.$(elem).attr('href').split('#')[0];
-        var url = doc.resolve(href);
-        // crawl more
-        spider.queue(url, handleRequest);
+    textract.fromUrl(doc.url, (error, result) => {
+        if (error)
+            return;
+
+        console.log('\nTEXT: %s \nVALOR: %s', result, bayesClassifier.classify(String(result).tokenizeAndStem()));
+        //console.log('>#', result + ' VALOR: ' + logisticClassifier.classify(String(result).tokenizeAndStem()));
+
+        // uses cheerio, check its docs for more info
+        doc.$('a').each(function (i, elem) {
+            // do stuff with element
+            var href = doc.$(elem).attr('href');
+
+            if (href) {
+                href = href.split('#')[0]
+                var url = doc.resolve(href);
+                // crawl more
+                spider.queue(url, handleRequest);
+            }
+        });
     });
 };
 
 // TODO parametrizar!
-spider.queue('https://news.google.com/', handleRequest);
-
-// --------------------------------------------------
-
-async function classify() {
-    natural.BayesClassifier.load(CLASSIFIER_FILE, null, function (err, classifier) {
-        console.log(classifier.classify(text.animals));
-    });
-}
-
-//classify();
+spider.queue('https://en.wikipedia.org/wiki/Special:Random', handleRequest);

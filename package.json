@@ -14,6 +14,7 @@
         "async": "^2.6.2",
         "natural": "^0.6.3",
         "node-spider": "^1.4.1",
-        "require-all": "^3.0.0"
+        "require-all": "^3.0.0",
+        "textract": "^2.4.0"
     }
 }

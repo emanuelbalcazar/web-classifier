@@ -35,7 +35,7 @@ class NaiveBayes {
 
     async load() {
         return new Promise((resolve, reject) => {
-            natural.LogisticRegressionClassifier.load(__dirname + '/..' + config.BAYES_CLASSIFIER_FILE, null, (error, classifier) => {
+            natural.BayesClassifier.load(__dirname + '/..' + config.BAYES_CLASSIFIER_FILE, null, (error, classifier) => {
                 if (error)
                     return reject(error);
 

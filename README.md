@@ -2,6 +2,8 @@
 
 Proyecto realizado para rendir el final de la materia Inteligencia Artificial en la Universidad Nacional de la Patagonia San Juan Bosco.
 
+Se implemento un "spider" que itera sobre todos los links obtenidos desde una pagina inicial y extrae el contenido para luego ser clasificado segun las tematicas habladas en el texto.
+
 ## Requisitos
 
 Instalar Node.js, NPM:
@@ -29,3 +31,18 @@ La araña generará un archivo de logs en `src/log/execution.log` donde se coloc
 - En la carpeta `src/dataset` se encuentran los archivos que contienen las palabras asociadas a cada tematica, con esto se entrenan los algoritmos de clasificación.
 
 - En la carpeta `src/classifiers` se encuentran los clasificadores entrenados que se almacenan como un archivo con formato JSON y se generan una vez que se entrenan a los clasificadores, esto permite poder cargarlos sin necesidad de volver a entrenarlos. 
+
+- Las palabras de los datasets se obtuvieron de [https://www.enchantedlearning.com/wordlist]()
+
+- Para extraer las palabras del dataset se usaron selectores en la consola del navegador (se podria automatizar):
+
+```javascript
+
+let a = document.querySelectorAll(".wordlist-section .wordlist-item");
+
+for (let i = 0; i < a.length; i++) {
+    if (a[i].childNodes[0].data)
+        console.log(a[i].childNodes[0].data);
+}
+
+```

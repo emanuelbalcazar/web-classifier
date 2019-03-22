@@ -1,4 +1,4 @@
 node_modules/
 package-lock.json
 src/log/execution.log
-src/storage/
+src/storage/*.json

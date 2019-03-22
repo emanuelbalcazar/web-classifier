@@ -41,8 +41,9 @@ class FileParser {
  */
 async function clean(records) {
     records = records.filter(elem => {
-        return (elem.length > 1);
+        return (elem.length > 2);
     });
+
     return records;
 }
 

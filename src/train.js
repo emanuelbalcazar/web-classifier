@@ -7,7 +7,7 @@ const DATASET_FOLDER = __dirname + config.DATASET_FOLDER;
 const classifiers = [];
 
 require('require-all')({
-    dirname: path.join(__dirname, 'classifiers'),
+    dirname: path.join(__dirname, config.CLASSIFIERS_FOLDER),
     map: (name, path) => {
         classifiers.push(require(path));
     }

@@ -53,8 +53,8 @@ var handleRequest = async function (doc) {
 
         console.log('\n- URL:', doc.url);
         console.log('- TEXT:', result);
-        console.log('- BAYES:', bayesClassifier.classify(String(result).tokenizeAndStem()));
-        console.log('- LOGISTIC:', logisticClassifier.classify(String(result).tokenizeAndStem()));
+        console.log('- BAYES:', bayesClassifier.getClassifications(String(result).tokenizeAndStem())[0]);
+        console.log('- LOGISTIC:', logisticClassifier.getClassifications(String(result).tokenizeAndStem())[0]);
 
         // uses cheerio, check its docs for more info
         doc.$('a').each(function (i, elem) {

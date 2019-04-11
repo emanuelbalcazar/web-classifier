@@ -40,7 +40,7 @@ var spider = new Spider({
 var handleRequest = async function (doc) {
 
     // atach natural methods
-    natural.LancasterStemmer.attach();
+    natural.PorterStemmer.attach();
 
     // load classifiers
     var bayesClassifier = await bayesModel.load();

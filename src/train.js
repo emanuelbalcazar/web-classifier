@@ -22,6 +22,8 @@ async function train() {
         let data = await parser.getData(DATASET_FOLDER + file);
         results.push({ data: data, name: file.replace('.txt', '') });
     }, async (error) => {
+        if (error)
+            return console.error('[train] - Error al leer los archivos:', error);
 
         results.forEach(record => {
             classifiers.map(classifier => classifier.addDocument(record.data, record.name));
@@ -35,4 +37,3 @@ async function train() {
 }
 
 train();
-

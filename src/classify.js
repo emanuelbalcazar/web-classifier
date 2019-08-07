@@ -1,5 +1,6 @@
 const natural = require('natural');
 const textract = require('textract');
+const stopword = require('stopword');
 
 const bayesModel = require('./classifiers/NaiveBayes');
 const logisticModel = require('./classifiers/LogisticRegression');
@@ -50,6 +51,10 @@ var handleRequest = async function (doc) {
     textract.fromUrl(doc.url, (error, result) => {
         if (error)
             return;
+
+        // tokenize, stem and remove stopwords
+        let text = String(result).tokenizeAndStem();
+        text = stopword.removeStopwords(text).join(' ');
 
         console.log('\n- URL:', doc.url);
         console.log('- TEXT:', result);
